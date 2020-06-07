@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "IEyhCIRC/xhZvFBUDuPP0rLPRSPImEkIq53aJEYFhQ67MZ+b3DPBsqiZ1pIaFoeEDKFiZY9obYAx8Z3Q9tkq1w==",
+  "success": true,
+  "projectFilePath": "D:\\Git\\WarGames\\WarGames\\WarGames\\WarGames.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Naka\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}

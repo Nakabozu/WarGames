@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IEyhCIRC/xhZvFBUDuPP0rLPRSPImEkIq53aJEYFhQ67MZ+b3DPBsqiZ1pIaFoeEDKFiZY9obYAx8Z3Q9tkq1w==",
+  "dgSpecHash": "flx3Y97CjIWdaU3Qkd97h5cRwvj8275Da5FtAodxfQswZjxuAiisjyiGw11Vp0kcm4tt48ouSSq8FN576wujWg==",
   "success": true,
-  "projectFilePath": "D:\\Git\\WarGames\\WarGames\\WarGames\\WarGames.csproj",
+  "projectFilePath": "C:\\Users\\saria\\Documents\\School\\Computer Science 2\\-------\\HW 1\\WarGames\\WarGames\\WarGames.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Naka\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+    "C:\\Users\\saria\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
   ],
   "logs": []
 }

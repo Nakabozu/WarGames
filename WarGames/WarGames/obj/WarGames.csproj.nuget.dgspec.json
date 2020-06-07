@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Git\\WarGames\\WarGames\\WarGames\\WarGames.csproj": {}
+    "C:\\Users\\saria\\Documents\\School\\Computer Science 2\\-------\\HW 1\\WarGames\\WarGames\\WarGames.csproj": {}
   },
   "projects": {
-    "D:\\Git\\WarGames\\WarGames\\WarGames\\WarGames.csproj": {
+    "C:\\Users\\saria\\Documents\\School\\Computer Science 2\\-------\\HW 1\\WarGames\\WarGames\\WarGames.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Git\\WarGames\\WarGames\\WarGames\\WarGames.csproj",
+        "projectUniqueName": "C:\\Users\\saria\\Documents\\School\\Computer Science 2\\-------\\HW 1\\WarGames\\WarGames\\WarGames.csproj",
         "projectName": "WarGames",
-        "projectPath": "D:\\Git\\WarGames\\WarGames\\WarGames\\WarGames.csproj",
-        "packagesPath": "C:\\Users\\Naka\\.nuget\\packages\\",
-        "outputPath": "D:\\Git\\WarGames\\WarGames\\WarGames\\obj\\",
+        "projectPath": "C:\\Users\\saria\\Documents\\School\\Computer Science 2\\-------\\HW 1\\WarGames\\WarGames\\WarGames.csproj",
+        "packagesPath": "C:\\Users\\saria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\saria\\Documents\\School\\Computer Science 2\\-------\\HW 1\\WarGames\\WarGames\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Naka\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\saria\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

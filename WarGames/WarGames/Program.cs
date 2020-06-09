@@ -18,6 +18,7 @@ namespace WarGames
             Card c2 = new Card('D', 3);
 
             Console.WriteLine(c1);
+            Console.WriteLine(c2);
             Console.WriteLine(c2.Compare(c1));
         }
     }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Dynamic;
-using System.Text;
 
 namespace WarGames
 {
@@ -47,17 +44,17 @@ namespace WarGames
         public int Compare(Card c)
         {
             int otherCardValue = c.rank;
-            if (this.rank < otherCardValue)
+            if(this.rank == otherCardValue)
             {
-                return -1;
+                return 0;
             }
-            else if (this.rank > otherCardValue || this.rank == 1)
+            else if ((this.rank > otherCardValue || this.rank == 1) && otherCardValue != 1)
             {
                 return 1;
             }
-            else 
+            else
             {
-                return 0;
+                return -1;
             }
         }
 
@@ -79,6 +76,11 @@ namespace WarGames
             }
             Console.WriteLine(st + " is not a valid suit of H, D, S or C.");
             return false;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("Suit: {0}\tRank: {1}", suit, rank);
         }
     }
 }

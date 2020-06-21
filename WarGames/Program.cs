@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Net.Security;
+using Wargames;
 
 namespace WarGames
 {
@@ -8,10 +8,7 @@ namespace WarGames
         static void Main(string[] args)
         {
             // create new deck
-            Deck  _deck = new Deck();
-
-            //list cards in deck
-            Console.WriteLine( _deck.CardsInDeck());
+            Deck _deck = new Deck();
 
             // fill cards in deck
             foreach (char _suit in Card.Suit)
@@ -19,52 +16,74 @@ namespace WarGames
                 for (int _rank = 1; _rank < 14; _rank++)
                 {
                     Card card = new Card(_suit, _rank);
-                     _deck.AddCard(card);
+                    _deck.AddCard(card);
                 }
             }
-
-            // list cards in deck
-            Console.WriteLine("Cards in _deck");
-            Console.WriteLine(_deck.CardsInDeck());
-
 
             for (int iCard = 1; iCard < 52; iCard++)
             {
                 _deck.ShuffleDeck();
             }
 
-             // show contents before shuffle
-            _deck.ShowContents();
 
-            Deck deck1 = new Deck();
-            Deck deck2 = new Deck();
+            player Player1 = new player("player 1");
+            player Player2 = new player("player 2");
 
             for (int i = 0; i < 26; i++)
             {
-                Card current_card =  _deck.OutputCard(i);
-                deck1.AddCard(current_card);
+                Card current_card = _deck.OutputCard(i);
+                Player1.deck.AddCard(current_card);
             }
-
-            Console.WriteLine("Cards in deck1");
-            deck1.ShowContents();
 
             for (int i = 26; i < 52; i++)
             {
-                Card current_card =  _deck.OutputCard(i);
-                deck2.AddCard(current_card);
+                Card current_card = _deck.OutputCard(i);
+                Player2.deck.AddCard(current_card);
             }
 
-            Console.WriteLine("Cards in deck2");
-            deck2.ShowContents();
+            int gameCounter = 0;
+            do
+            {
+                gameCounter++;
 
-            // add card from top of 2nd deck to bottom of first deck
-            deck1.AddCard(deck2.OutputCard(25));
+                if(Player1.Play().Compare(Player2.Play()) == 1)
+                {
+                    Player1.deck.AddCard(Player2.deck.GiveTopCard());
+                }
+                else if(Player1.Play().Compare(Player2.Play()) == -1)
+                {
+                    Player2.deck.AddCard(Player1.deck.GiveTopCard());
+                }
+                else
+                {
+                    Player1.deck.AddCard(Player1.deck.GiveTopCard());
+                    Player2.deck.AddCard(Player2.deck.GiveTopCard());
+                }
+            } while (gameCounter <= 100 && Player1.CanPlay() && Player2.CanPlay());
 
-            Console.WriteLine("Cards in deck1 now");
-            deck1.ShowContents();
 
+            /***********
+             * RESULTS *
+             ***********/
+             
+            Console.WriteLine(string.Format("(Player 1, {0})", Player1.Score()));
+            Player1.deck.ShowContents();
 
+            Console.WriteLine(string.Format("(Player 2, {0})", Player2.Score()));
+            Player2.deck.ShowContents();
 
+            if(Player1.Score() > Player2.Score())
+            {
+                Console.WriteLine(string.Format("Player 1 is the winner with a score of {0}", Player2.Score()));
+            }
+            else if (Player1.Score() < Player2.Score())
+            {
+                Console.WriteLine(string.Format("Player 2 is the winner with a score of {0}", Player2.Score()));
+            }
+            else
+            {
+                Console.WriteLine(string.Format("Both players tie with a score of {0}", Player2.Score()));
+            }
         }
     }
 }
